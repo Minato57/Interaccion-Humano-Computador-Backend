@@ -13,7 +13,7 @@ export class TypeOrmProductRepository implements IProductRepository {
   ) {}
 
   async findAllActive(categoryName?: string): Promise<DomainProduct[]> {
-    const where: any = { isActive: true };
+    const where: any = {};
     
     if (categoryName) {
       where.productTypeName = categoryName;
