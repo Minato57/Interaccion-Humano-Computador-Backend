@@ -19,9 +19,11 @@ import { GetProductTypesUseCase } from './application/use-cases/get-product-type
 import { ProductController } from './presentation/controllers/product.controller';
 import { ProductTypeController } from './presentation/controllers/product-type.controller';
 import { LoggerMiddleware } from './logger.middleware';
+import { AuthModule } from './application/auth.module';
 
 @Module({
   imports: [
+    AuthModule,
     // 1. Cargamos el archivo .env para que esté disponible en toda la app
     ConfigModule.forRoot({
       isGlobal: true,
